@@ -1,0 +1,18 @@
+import owl from './owl-hero.webp'
+import owlPen from './owl-pen.webp'
+import logoLight from './logo-light.svg'
+import logoDark from './logo-dark.svg'
+import wmLight from './logo-wordmark-light.svg'
+import wmDark from './logo-wordmark-dark.svg'
+import logo1 from './logo1.jpg'
+import logo2 from './logo2.jpg'
+import p1 from './p1.jpg'
+import p2 from './p2.jpg'
+import g1 from './g1.jpg'
+import sp1 from './sp1.jpg'
+import g2 from './g2.jpg'
+import sp2 from './sp2.jpg'
+import spons1 from './spons1.jpg'
+import voidDevMark from './voiddev-mark.png'
+
+export const A={owl,owlPen,logoLight,logoDark,wmLight,wmDark,logo1,logo2,p1,p2,g1,sp1,g2,sp2,spons1,voidDevMark}

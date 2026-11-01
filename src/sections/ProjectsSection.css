@@ -1,0 +1,4 @@
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0}.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;font:inherit;font-weight:var(--fw-semibold);font-size:var(--fs-sm);line-height:1.2;cursor:pointer;transition:all .2s}
+.filters button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.empty{padding:40px;text-align:center;color:var(--mute);border:2px dashed var(--line);border-radius:var(--r);font-size:var(--fs-base);line-height:var(--lh-body)}
+@media(max-width:600px){.filters{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:2px 16px;scrollbar-width:none}.filters button{white-space:nowrap;min-height:44px}}

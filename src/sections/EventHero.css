@@ -1,0 +1,33 @@
+.eh{position:relative;padding:104px 0 56px;overflow:hidden}.eh-anchor{position:absolute;top:0}
+.eh-card{display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;padding:clamp(22px,4vw,48px);border-radius:28px}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;font-size:var(--fs-xs);font-weight:var(--fw-semibold);letter-spacing:.02em;color:#e9ddff;background:#8b5cf624;border:1px solid #8b5cf666}
+.pill i{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px var(--gold)}.pill.live{color:#fff;background:#e5232d55;border-color:#e5232d}.pill.live i{background:#ff5b64;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.25}}
+.eh h1{font-size:clamp(1.9rem,4.4vw,3.2rem);letter-spacing:var(--tracking-tight);line-height:var(--lh-tight);color:#fff;margin:18px 0 14px}
+.eh .lead{color:#c9bfe6;max-width:var(--measure);font-size:var(--fs-md);line-height:var(--lh-relaxed)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.chips span{font-size:var(--fs-sm);line-height:1.45;padding:8px 14px;border-radius:10px;background:#ffffff0d;border:1px solid #ffffff1f;color:#d9d0f0}
+.eh .cta{display:flex;gap:12px;flex-wrap:wrap}
+.btn.grad{background:linear-gradient(135deg,#8b5cf6,#6a2bd1);color:#fff;box-shadow:0 8px 26px #6a2bd166}.btn.grad:hover{transform:translateY(-2px)}
+.btn.ghost{background:#ffffff0d;border:1px solid #ffffff2e;color:#fff}.btn.ghost:hover{background:#ffffff1c;transform:translateY(-2px)}.btn.wide{width:100%;justify-content:center;font-size:var(--fs-sm);padding:11px 16px}
+.stats{display:flex;flex-wrap:wrap;gap:12px 36px;margin-top:30px;padding-top:24px;border-top:1px solid #ffffff1a}
+.stats b{display:block;font-size:1.65rem;font-weight:var(--fw-bold);color:#fff;line-height:1.15}.stats span{font-size:var(--fs-xs);line-height:1.45;color:#b7abdd}
+.eh-side{position:relative;padding-top:120px}
+.mascot{position:absolute;top:0;left:50%;transform:translateX(-50%);z-index:2;text-align:center}
+.mascot img{width:190px;height:auto;margin:0 auto;filter:drop-shadow(0 14px 22px #0009);animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-10px) rotate(-1deg)}}
+.badge{display:inline-block;margin-top:-8px;font-size:var(--fs-xs);font-weight:var(--fw-bold);letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:999px;background:#1a0f3a;color:var(--gold);border:1px solid var(--gold)}
+.unit{padding:84px 20px 20px;border-radius:22px}
+.unit-h{display:flex;justify-content:space-between;gap:10px;font-size:var(--fs-xs);font-weight:var(--fw-medium);letter-spacing:.1em;text-transform:uppercase;color:#b7abdd;margin-bottom:14px}.unit-h em{font-style:normal;color:var(--gold)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.cell{text-align:center;padding:12px 4px;border-radius:12px;background:#0a0618aa;border:1px solid #8b5cf655}.cell b{display:block;font-size:1.5rem;font-weight:var(--fw-bold);font-variant-numeric:tabular-nums;color:#fff;animation:tick .35s}.cell span{font-size:.68rem;font-weight:var(--fw-medium);letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}.cell.hot{border-color:#22d3ee88}.cell.hot b{color:#67e8f9}
+@keyframes tick{from{opacity:.3;transform:translateY(-4px)}}
+.note{margin:12px 0 0;font-size:var(--fs-sm);line-height:1.55;color:#b7abdd;text-align:center}
+.rows{list-style:none;margin:16px 0;padding:14px 16px;border-radius:12px;background:#ffffff08;border:1px solid #ffffff14;display:grid;gap:10px}
+.rows li{display:flex;justify-content:space-between;font-size:var(--fs-sm);line-height:1.5;color:#d6cef0}.rows b{font-weight:var(--fw-semibold)}.rows .ok{color:#4ade80}.rows .wait{color:var(--gold)}.rows .soon{color:#c4b5fd}
+@media(max-width:900px){.eh-card{grid-template-columns:1fr}.eh-side{max-width:460px;margin:0 auto;width:100%}}
+@media(max-width:600px){.eh{padding-top:90px}.eh .cta .btn{width:100%;justify-content:center}.mascot img{width:160px}.eh-side{padding-top:104px}.unit{padding-top:74px}}
+@media(max-width:360px){.cell b{font-size:1.2rem}}
+
+/* Arabic: natural tracking, no forced casing */
+html[lang='ar'] .unit-h,html[lang='ar'] .cell span,html[lang='ar'] .badge,html[lang='ar'] .pill{letter-spacing:0;text-transform:none}
+html[lang='ar'] .cell span{font-size:.72rem}

@@ -1,0 +1,189 @@
+/* Dark glass theme — loaded last; overrides tokens and light-mode colours site-wide */
+:root{--navy:#0B1240;--royal:#4b3ad8;--purple:#8b5cf6;--gold:#F6B23C;--bg:#08050f;--card:#ffffff0a;--ink:#f1eefb;--mute:#b8aed6;--line:#ffffff1c;--body:#d8d0ef;--mute-soft:#a99dc9;--link:#c4b5fd;color-scheme:dark}
+body{background:radial-gradient(1100px 600px at 80% -5%,#6a2bd155,transparent 60%),radial-gradient(900px 600px at -10% 40%,#3a2fc733,transparent 60%),radial-gradient(800px 500px at 100% 90%,#f6b23c14,transparent 60%),#08050f;background-attachment:fixed}
+.glass{background:linear-gradient(160deg,#ffffff12,#ffffff05);border:1px solid #ffffff1f;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);box-shadow:0 24px 60px #0007,inset 0 1px 0 #ffffff14}
+h1,h2,h3,.card h3,.detail h1,.detail h3{color:#fff}.eyebrow{color:var(--gold)}
+header{background:#08050fb8;border-bottom:1px solid #ffffff14}
+.links a.on,.links a:hover{color:#fff;background:#8b5cf62e}.links .btn{background:linear-gradient(135deg,#8b5cf6,#6a2bd1);box-shadow:0 6px 18px #6a2bd155}
+.burger{color:#fff}.links{background:#0d0820f2}
+.btn.pri{background:linear-gradient(135deg,#8b5cf6,#6a2bd1)}.btn.sec{color:#fff;border-color:#ffffff40}.btn.sec:hover{background:#ffffff1c}
+.card{background:linear-gradient(160deg,#ffffff10,#ffffff05);backdrop-filter:blur(12px)}.card:hover{box-shadow:0 18px 40px #0008;border-color:#8b5cf666}
+.filters button{background:#ffffff0a;color:#d9d0f0;border-color:#ffffff22}.filters button[aria-pressed=true]{background:#8b5cf6;color:#fff;border-color:#8b5cf6}
+footer{background:#050310;border-top:1px solid #ffffff14}
+.bub{background:#150c33;border-color:var(--gold);color:#f1eefb}.bub button{color:#fff;background:#ffffff1f}
+.lg{background:#fff}
+.detail .lead{color:var(--body)}
+.card p{color:var(--mute)}
+
+/* ===== LIGHT THEME (premium) ===== */
+:root[data-theme=light]{
+  --navy:#172033;--royal:#315E91;--purple:#8AB4D8;--gold:#F6B23C;
+  --bg:#FAFAF8;--card:#FFFFFF;--ink:#172033;--mute:#475569;--line:#E2E8F0;
+  --body:#334155;--mute-soft:#64748B;--link:#245A91;
+  color-scheme:light;
+}
+:root[data-theme=light] body{background:#FAFAF8;color:#172033}
+:root[data-theme=light] header{background:#FFFFFFe6;border-bottom:1px solid #E2E8F0}
+:root[data-theme=light] .links a{color:#475569}
+:root[data-theme=light] .links a.on,:root[data-theme=light] .links a:hover{color:#172033;background:#315E9114}
+:root[data-theme=light] .glass{background:#FFFFFF;border:1px solid #E2E8F0;backdrop-filter:none;box-shadow:0 8px 24px #1720330a}
+:root[data-theme=light] .card{background:#FFFFFF;border:1px solid #E2E8F0;backdrop-filter:none;box-shadow:0 4px 14px #17203308}
+:root[data-theme=light] footer{background:#172033;color:#cbd5e1}
+:root[data-theme=light] h1,:root[data-theme=light] h2,:root[data-theme=light] h3,:root[data-theme=light] .card h3,:root[data-theme=light] .detail h1,:root[data-theme=light] .detail h3{color:#172033}
+:root[data-theme=light] .eyebrow{color:#315E91}
+:root[data-theme=light] .lead{color:#334155}
+:root[data-theme=light] .card p,:root[data-theme=light] .note{color:#475569}
+:root[data-theme=light] .btn.pri{background:#315E91;color:#fff}
+:root[data-theme=light] .btn.sec{color:#172033;border-color:#CBD5E1}
+:root[data-theme=light] .btn.sec:hover{background:#F3F5F7;color:#172033}
+:root[data-theme=light] .filters button{background:#FFFFFF;color:#172033;border-color:#E2E8F0}
+:root[data-theme=light] .filters button[aria-pressed=true]{background:#315E91;color:#fff;border-color:#315E91}
+:root[data-theme=light] .contact-form{background:#FFFFFF;border:1px solid #E2E8F0}
+:root[data-theme=light] .contact-links a{color:#245A91}
+:root[data-theme=light] .form span{color:#172033}
+:root[data-theme=light] .form input,:root[data-theme=light] .form textarea{background:#F3F5F7;border:1px solid #CBD5E1;color:#172033}
+:root[data-theme=light] .form input:focus,:root[data-theme=light] .form textarea:focus{border-color:#315E91}
+:root[data-theme=light] .form input::placeholder,:root[data-theme=light] .form textarea::placeholder{color:#64748B}
+:root[data-theme=light] .status.success{background:#DCFCE7;border:1px solid #86EFAC;color:#166534}
+:root[data-theme=light] .status.error{background:#FFE4E6;border:1px solid #FDA4AF;color:#9F1239}
+:root[data-theme=light] .social-pill{background:#EFF6FF;color:#245A91;border-color:#BFDBFE}
+:root[data-theme=light] .social-pill:hover{background:#245A91;color:#fff;border-color:#245A91}
+:root[data-theme=light] .pcard .meta2{color:#245A91}
+:root[data-theme=light] .pcard .go{color:#245A91}
+:root[data-theme=light] .tag{background:#315E9114;color:#315E91}
+:root[data-theme=light] .tag.f{background:#F6B23C26;color:#7A4A00}
+:root[data-theme=light] .back{color:#245A91}
+:root[data-theme=light] .bub{background:#FFFFFF;border-color:#315E91;color:#172033}
+:root[data-theme=light] .bub button{color:#172033;background:#E2E8F0}
+
+/* Hero and event panels stay rich/dark for contrast in both themes */
+:root[data-theme=light] .hero{background:radial-gradient(900px 500px at 85% 0,#6a2bd122,transparent),radial-gradient(700px 400px at 0 100%,#f6b23c24,transparent),#172033}
+:root[data-theme=light] .eh{background:radial-gradient(900px 500px at 85% 0,#6a2bd122,transparent),#172033}
+:root[data-theme=light] .hero h1,:root[data-theme=light] .eh h1{color:#fff}
+:root[data-theme=light] .hero .lead,:root[data-theme=light] .eh .lead{color:#c9bfe6}
+:root[data-theme=light] .hero .eyebrow,:root[data-theme=light] .eh .eyebrow{color:#F6B23C}
+:root[data-theme=light] .hero .btn.sec{color:#fff;border-color:#ffffff80}
+:root[data-theme=light] .hero .btn.sec:hover{background:#ffffff1c;color:#fff;border-color:#ffffffb3}
+
+:root[data-theme=light] .evt h2{color:#fff}
+:root[data-theme=light] .evt p{color:#dfe2ff}
+:root[data-theme=light] .evt .btn.gold{color:#1b1500}
+
+/* Impact edition cards keep their gradient surfaces in light mode */
+:root[data-theme=light] .card.ed{background:linear-gradient(150deg,#8a2bd0,#5a0094);color:#fff;border:0}
+:root[data-theme=light] .card.ed.e2{background:linear-gradient(150deg,#315E91,#172033)}
+:root[data-theme=light] .card.ed.e3{background:linear-gradient(150deg,#172033,#8AB4D8)}
+:root[data-theme=light] .card.ed h3{color:#fff!important}
+:root[data-theme=light] .card.ed .num{color:#fff}
+:root[data-theme=light] .card.ed small{color:rgba(255,255,255,.92)}
+:root[data-theme=light] .card.ed p{color:rgba(255,255,255,.82)!important}
+:root[data-theme=light] .tot{background:linear-gradient(135deg,#172033,#315E91)}
+
+/* Light-mode header controls */
+:root[data-theme=light] .links .btn{background:#315E91;color:#fff;box-shadow:0 2px 6px #315E9133}
+:root[data-theme=light] .links .btn:hover{background:#245A91}
+:root[data-theme=light] .lang-pill .lp-slider{background:linear-gradient(135deg,#315E91,#245A91);box-shadow:0 4px 12px #315E9155}
+:root[data-theme=light] .theme-toggle:hover{background:#315E91;color:#fff}
+:root[data-theme=light] .icon-btn:hover{background:#315E91;color:#fff}
+:root[data-theme=light] .burger{border-color:#CBD5E1;color:#172033}
+:root[data-theme=light] .links{background:#FFFFFFf2}
+:root[data-theme=light] .contact-form h2{color:#172033}
+:root[data-theme=light] .status.success{color:#166534}
+:root[data-theme=light] .status.error{color:#9F1239}
+
+/* ===== LIGHT MODE — senior polish ===== */
+:root[data-theme=light] body,
+:root[data-theme=light] .card,
+:root[data-theme=light] header,
+:root[data-theme=light] footer,
+:root[data-theme=light] .btn,
+:root[data-theme=light] .glass {
+  transition: background-color .3s var(--ease), color .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+}
+:root[data-theme=light] body {
+  background: linear-gradient(180deg, #FAFAF8 0%, #F3F5F7 100%);
+  background-attachment: fixed;
+}
+:root[data-theme=light] .card {
+  box-shadow: 0 1px 2px #17203308, 0 4px 12px #17203306, 0 8px 24px #17203304;
+}
+:root[data-theme=light] .card:hover {
+  box-shadow: 0 2px 4px #1720330a, 0 8px 20px #1720330c, 0 16px 36px #17203308;
+  transform: translateY(-3px);
+  border-color: #CBD5E1;
+}
+:root[data-theme=light] .glass {
+  box-shadow: 0 1px 2px #17203306, 0 6px 18px #17203308;
+}
+:root[data-theme=light] header {
+  box-shadow: 0 1px 0 #E2E8F0, 0 4px 12px #17203306;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+:root[data-theme=light] .btn.pri {
+  box-shadow: 0 2px 6px #315E9133, 0 6px 16px #315E9122;
+}
+:root[data-theme=light] .btn.pri:hover {
+  box-shadow: 0 4px 10px #315E9140, 0 10px 24px #315E912a;
+  transform: translateY(-2px);
+}
+:root[data-theme=light] .btn.sec:hover {
+  background: #F3F5F7;
+  border-color: #315E91;
+  color: #172033;
+}
+:root[data-theme=light] .filters button {
+  box-shadow: 0 1px 2px #17203306;
+}
+:root[data-theme=light] .filters button[aria-pressed=true] {
+  box-shadow: 0 2px 8px #315E9133;
+}
+:root[data-theme=light] .form input:focus,
+:root[data-theme=light] .form textarea:focus {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px #315E911f;
+}
+:root[data-theme=light] .social-pill {
+  box-shadow: 0 1px 2px #17203306;
+}
+:root[data-theme=light] .social-pill:hover {
+  box-shadow: 0 4px 12px #245A9133;
+  transform: translateY(-1px);
+}
+:root[data-theme=light] .tag {
+  box-shadow: 0 1px 2px #17203306;
+}
+:root[data-theme=light] .owl-guide .bub,
+:root[data-theme=light] .bub {
+  box-shadow: 0 4px 12px #1720330a, 0 12px 30px #17203308;
+}
+:root[data-theme=light] :focus-visible {
+  outline: 3px solid #315E91;
+  outline-offset: 3px;
+}
+:root[data-theme=light] .links a.on {
+  box-shadow: inset 0 0 0 1px #315E9114;
+}
+:root[data-theme=light] .back:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+:root[data-theme=light] .pcard {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 14px #17203308;
+}
+:root[data-theme=light] .pcard:hover {
+  box-shadow: 0 8px 24px #1720330c;
+}
+:root[data-theme=light] .empty {
+  background: #F8FAFC;
+  border-color: #CBD5E1;
+}
+:root[data-theme=light] .status {
+  border-width: 1px;
+}
+:root[data-theme=light] .contact-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -1,0 +1,5 @@
+.grid{display:grid;gap:18px}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:900px){.g3{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.grid{gap:12px}.g3,.g2{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px #101b6320}.card .ic{font-size:1.65rem;line-height:1}.card h3{margin:12px 0 6px;color:var(--navy);font-size:var(--fs-lg);font-weight:var(--fw-semibold);line-height:var(--lh-snug)}.card p{color:var(--mute);font-size:var(--fs-sm);line-height:var(--lh-body)}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]) .card h3{color:#fff}}

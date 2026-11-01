@@ -1,0 +1,15 @@
+.hero{padding:130px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"SSOS";position:absolute;right:-2%;top:6%;font-weight:var(--fw-bold);font-size:min(34vw,420px);color:#fff;opacity:.04;line-height:1;pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;position:relative}
+.hero h1{font-size:var(--fs-hero);color:#fff;letter-spacing:var(--tracking-tight);line-height:1.06;font-weight:var(--fw-bold)}.hero h1 em{font-style:normal;color:#f59e0b}
+.hero p.lead{margin:20px 0 28px;max-width:var(--measure)}.cta{display:flex;gap:12px;flex-wrap:wrap}
+.stage{position:relative;display:grid;place-items:center;min-height:360px}
+.stage:before{content:"";position:absolute;width:min(420px,88%);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,var(--purple),var(--royal));opacity:.92}
+.stage:after{content:"";position:absolute;width:min(470px,98%);aspect-ratio:1;border-radius:50%;border:2px dashed var(--gold);opacity:.7}
+.stage img{position:relative;z-index:1;width:min(400px,90%);filter:drop-shadow(0 18px 24px #101b6355);animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px) rotate(-1deg)}}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.stage{min-height:300px;order:-1}.hero{padding-top:100px}}
+.hero{background:radial-gradient(900px 500px at 85% 0,#6a2bd122,transparent),radial-gradient(700px 400px at 0 100%,#f6b23c24,transparent)}
+@media(max-width:600px){.cta .btn{width:100%;justify-content:center}}
+@media(max-width:360px){.hero h1{font-size:1.8rem}}
+@media(max-height:480px) and (orientation:landscape){.hero{padding-top:90px}.stage{min-height:220px}}

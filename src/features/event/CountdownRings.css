@@ -1,0 +1,17 @@
+.cd-panel{position:relative;z-index:3;width:calc(100% + 140px);margin-inline-end:-140px;padding:24px 20px 20px;overflow:visible;border:1px solid #f6b23c88;border-radius:22px;background:linear-gradient(145deg,#211344f5,#0c0819fa);box-shadow:0 24px 54px #05020d88,inset 0 1px 0 #ffffff28}
+.cd-panel:before{content:"";position:absolute;inset:0 14% auto;height:1px;background:linear-gradient(90deg,transparent,#f6b23caa,transparent)}
+.cd-panel:after{content:"";position:absolute;top:18px;right:-1px;bottom:18px;width:3px;border-radius:3px;background:#ffd36b;box-shadow:0 0 20px #f6b23c99}
+.cd-title{margin:0 0 18px;color:#ffd36b;font-size:var(--fs-sm);font-weight:var(--fw-bold);letter-spacing:.12em;text-align:center;text-transform:uppercase;text-shadow:0 0 16px #f6b23c66}
+:root[data-theme='light'] .evt .cd-title{color:#ffd36b}
+.cd{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.cell{display:flex;min-width:0;min-height:148px;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:16px 8px;border:1px solid #ffffff30;border-radius:16px;background:linear-gradient(160deg,#ffffff18,#ffffff09);box-shadow:inset 0 1px 0 #ffffff18;text-align:center}
+.cell b{display:block;color:#fff;font-size:3.5rem;font-weight:var(--fw-bold);font-variant-numeric:tabular-nums;line-height:1;animation:tick .35s}
+.cell span{color:#f6d990;font-size:.72rem;font-weight:var(--fw-semibold);letter-spacing:.08em;text-transform:uppercase}
+.cell.hot{border-color:#f6b23caa;background:linear-gradient(160deg,#f6b23c2e,#ffffff0a);box-shadow:inset 0 0 24px #f6b23c12,0 0 20px #f6b23c15}
+.cell.hot b{color:#ffd36b}
+.msg{color:#dfe2ff;font-size:var(--fs-sm);line-height:1.5;padding:12px}
+@keyframes tick{0%{transform:scale(1.15)}100%{transform:scale(1)}}
+@media(max-width:1312px){.cd-panel{width:100%;margin-inline-end:0}}
+@media(max-width:600px){.cd-panel{padding:18px 12px 12px}.cd{gap:7px}.cell{min-height:110px;padding:12px 4px}.cell b{font-size:2.5rem}}
+@media(max-width:380px){.cell{min-height:98px}.cell b{font-size:2rem}.cell span{font-size:.66rem}}
+html[lang='ar'] .cd-title,html[lang='ar'] .cell span{letter-spacing:0;text-transform:none}

@@ -1,0 +1,3 @@
+export const OWL={welcome:'Welcome to SSOS! 🦉 We’re glad you’re here. Explore our events, discover what we’ve achieved, and see how learning can create real opportunities.',about:'Discover our mission and the impact we’re building together.',impact:'Every edition brings more students closer to new opportunities. Our first two editions reached 700 and 1,300 beneficiaries.',event:'Something exciting is coming! Keep an eye on the countdown.',projects:'Take a closer look at what SSOS organizes and delivers.',sponsors:'Meet the organizations helping us make these opportunities possible.'}
+
+export const GUIDE_IDS=['home','event','about','impact','projects','sponsors','contact']
