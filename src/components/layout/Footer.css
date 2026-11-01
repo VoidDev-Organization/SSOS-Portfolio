@@ -1,7 +1,5 @@
 footer{background:#05030b;color:#cbd5e1;padding:28px 0 16px;border-top:1px solid rgba(167,139,250,0.12)}
-footer .cols{display:flex;align-items:center;justify-content:space-between}
-footer .brand .lp{background:#fff;border-radius:14px;padding:8px 14px;display:inline-block;margin-bottom:14px}
-footer .brand .lp img{height:46px;width:auto}
+footer .cols{display:flex;align-items:center;justify-content:center}
 footer .brand p{margin:4px 0;color:#a8b6c8;font-size:var(--fs-sm);line-height:var(--lh-body)}
 footer .muted{color:#94a3b8;font-size:var(--fs-sm);line-height:var(--lh-body)}
 footer nav{display:flex;flex-direction:column;gap:8px}

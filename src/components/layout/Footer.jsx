@@ -13,7 +13,6 @@ const SOCIALS = CONFIG.social ? [
 ] : []
 
 export function Footer(){const {t}=useLang();return <footer><div className="wrap"><div className="cols">
- <div className="brand"><div className="lp"><img src={A.logoLight||A.logo} alt="SSOS"/></div></div>
  <div className="info"><div className="contact"><h4>{t('footer.contact')}</h4>{CONFIG.contact?<a href={'mailto:'+CONFIG.contact}>{CONFIG.contact}</a>:<span className="muted">{t('footer.contactSoon')}</span>}</div><div className="follow"><h4>{t('footer.follow')}</h4><div className="socials">
 {SOCIALS.map(s=><a key={s.key} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>{s.icon}</a>)}
 </div></div></div></div>

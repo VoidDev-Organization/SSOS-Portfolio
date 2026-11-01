@@ -1,4 +1,22 @@
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:26px 0}.filters button{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 16px;border-radius:999px;font:inherit;font-weight:var(--fw-semibold);font-size:var(--fs-sm);line-height:1.2;cursor:pointer;transition:all .2s}
 .filters button[aria-pressed=true]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .empty{padding:40px;text-align:center;color:var(--mute);border:2px dashed var(--line);border-radius:var(--r);font-size:var(--fs-base);line-height:var(--lh-body)}
+.project-entry{display:flex;min-width:0;flex-direction:column;align-items:flex-start;gap:12px;color:inherit;text-decoration:none}
+.project-entry>.profile-card{width:100%}
+.project-entry-cta{display:inline-flex;min-height:40px;align-items:center;gap:8px;padding:8px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--link);font-size:var(--fs-sm);font-weight:var(--fw-semibold);line-height:1.3;transition:background .2s,color .2s,border-color .2s}
+.project-entry:hover .project-entry-cta{background:var(--navy);border-color:var(--navy);color:#fff}
 @media(max-width:600px){.filters{flex-wrap:nowrap;overflow-x:auto;margin-inline:-16px;padding:2px 16px;scrollbar-width:none}.filters button{white-space:nowrap;min-height:44px}}
+@media(max-width:600px){
+	#projects .grid.g3{grid-template-columns:minmax(0,1fr);gap:18px}
+	#projects .grid.g3>a .profile-card__body{gap:8px;padding:8px;border-radius:calc(var(--pc-radius) + 8px)}
+	#projects .grid.g3>a .profile-card__tile{aspect-ratio:4 / 5}
+	#projects .grid.g3>a .profile-card__photo{inset:0;width:100%;height:100%;object-position:center;transform:none}
+	#projects .grid.g3>a .profile-card__scrim,
+	#projects .grid.g3>a .profile-card__info,
+	#projects .grid.g3>a .profile-card__holo,
+	#projects .grid.g3>a .profile-card__sheen{display:none}
+	#projects .grid.g3>a .profile-card__footer{gap:10px;padding:6px 10px 8px}
+	#projects .grid.g3>a .profile-card__avatar{width:36px;height:36px}
+	#projects .grid.g3>a .profile-card__handle{font-size:.85rem}
+	#projects .grid.g3>a .profile-card__status{font-size:.78rem}
+}

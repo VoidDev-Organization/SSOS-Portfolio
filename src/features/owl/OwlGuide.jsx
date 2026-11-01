@@ -19,9 +19,9 @@ export function OwlGuide(){const {lang,t}=useLang();
  useEffect(()=>{if(msgKey.current){const text=t('owl.'+msgKey.current);if(text&&text!=='owl.'+msgKey.current)setMsg(text)}},[lang])
  useEffect(()=>{let frame=0;const update=()=>{frame=0;const marker=window.innerHeight*.42;let active='',best=Infinity
   GUIDE_IDS.forEach(id=>{const section=document.getElementById(id);if(!section)return;const {top,bottom}=section.getBoundingClientRect();if(bottom<=0||top>=window.innerHeight)return;const distance=marker<top?top-marker:marker>bottom?marker-bottom:0;if(distance<best){best=distance;active=id}})
-  if(active&&active!==cur.current){cur.current=active;say(active,false,true)}}
+  if(active&&active!==cur.current){cur.current=active;if(!window.matchMedia('(max-width:600px)').matches)say(active,false,true)}}
   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
-  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();timerRef.current=setTimeout(()=>say(cur.current==='home'?'welcome':cur.current),1200)
+  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();if(!window.matchMedia('(max-width:600px)').matches)timerRef.current=setTimeout(()=>say(cur.current==='home'?'welcome':cur.current),1200)
   return()=>{window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);if(frame)cancelAnimationFrame(frame);clearTimeout(timerRef.current)}
  },[])
  useEffect(()=>{if(!pos||!guideRef.current)return;const rect=guideRef.current.getBoundingClientRect();const next=clampGuidePosition(pos.x,pos.y,rect);if(next.x!==pos.x||next.y!==pos.y)setPos(next)},[pos,show,msg,side])

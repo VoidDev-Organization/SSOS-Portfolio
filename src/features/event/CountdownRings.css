@@ -12,6 +12,6 @@
 .msg{color:#dfe2ff;font-size:var(--fs-sm);line-height:1.5;padding:12px}
 @keyframes tick{0%{transform:scale(1.15)}100%{transform:scale(1)}}
 @media(max-width:1312px){.cd-panel{width:100%;margin-inline-end:0}}
-@media(max-width:600px){.cd-panel{padding:18px 12px 12px}.cd{gap:7px}.cell{min-height:110px;padding:12px 4px}.cell b{font-size:2.5rem}}
-@media(max-width:380px){.cell{min-height:98px}.cell b{font-size:2rem}.cell span{font-size:.66rem}}
+@media(max-width:600px){.cd-panel{padding:14px 10px 10px;border-radius:16px}.cd-title{margin-bottom:10px;font-size:.75rem;letter-spacing:.08em}.cd{gap:6px}.cell{min-height:76px;gap:6px;padding:8px 3px;border-radius:11px}.cell b{font-size:1.85rem}.cell span{font-size:.62rem;letter-spacing:.04em}}
+@media(max-width:380px){.cd{gap:4px}.cell{min-height:68px}.cell b{font-size:1.6rem}.cell span{font-size:.58rem}}
 html[lang='ar'] .cd-title,html[lang='ar'] .cell span{letter-spacing:0;text-transform:none}
