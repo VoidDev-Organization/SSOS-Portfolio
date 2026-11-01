@@ -6,6 +6,7 @@ import {stateOf,fmt} from '../utils/events'
 import {NavLink} from '../components/layout/NavLink'
 import {useLang} from '../context/LangContext'
 import {CountUp} from '../components/ui/CountUp'
+import {CalendarIcon,LocationIcon} from '../components/ui/MetaIcons'
 import './EventHero.css'
 
 const pad=n=>String(n).padStart(2,'0')
@@ -43,7 +44,7 @@ export function EventHero({event}){const {lang,t}=useLang();
       <span className={'pill'+(live?' live':'')}><i/>{live?t('event.live'):st==='tbd'?t('event.dateTbd'):t('event.startsSoon')}</span>
       <h1>{event.title}</h1>
       <p className="lead">{lang==='ar'&&(event.descriptionAr)?event.descriptionAr:event.description}</p>
-      <div className="chips"><span>📍 {lang==='ar'&&(event.locationAr)?event.locationAr:event.location}</span><span>🎓 {t('event.audience')}</span>{event.startDate&&<span>📅 {lang==='ar'?new Intl.DateTimeFormat('ar',{dateStyle:'full',timeStyle:'short',timeZone:event.timezone}).format(new Date(event.startDate))+' ('+event.timezone+')':fmt(event)}</span>}</div>
+      <div className="chips"><span><LocationIcon/>{lang==='ar'&&(event.locationAr)?event.locationAr:event.location}</span><span>🎓 {t('event.audience')}</span>{event.startDate&&<span><CalendarIcon/>{lang==='ar'?new Intl.DateTimeFormat('ar',{dateStyle:'full',timeStyle:'short',timeZone:event.timezone}).format(new Date(event.startDate))+' ('+event.timezone+')':fmt(event)}</span>}</div>
       <div className="cta">
         {event.ticketUrl?<a className="btn grad" href={event.ticketUrl} target="_blank" rel="noopener noreferrer">{live?t('event.joinNow'):t('event.getTicket')}</a>:<span className="btn off" role="note">{t('event.accessComing')}</span>}
         <NavLink id="projects" className="btn ghost">{t('event.explorePast')}</NavLink>

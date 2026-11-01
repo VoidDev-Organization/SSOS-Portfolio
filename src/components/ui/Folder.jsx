@@ -118,7 +118,7 @@ const measureFolder = (book, scale, labelWidth, hasLabel, tabPosition) => {
       : tabPosition === 'center'
         ? (w - tabW) / 2
         : w - corners[1] - 5 * scale - shoulder - tabW;
-  const docW = book ? w * 0.8 : w * 0.54;
+  const docW = book ? w * 0.8 : w * 0.82;
   return {
     book,
     scale,
@@ -662,12 +662,14 @@ const DocumentCard = ({ title, description }) => (
   <div className="folder-doc">
     {title ? <span className="folder-doc-title">{title}</span> : <span className="folder-doc-heading" />}
     {description && <span className="folder-doc-text">{description}</span>}
-    <span className="folder-doc-line" style={{ width: '92%' }} />
-    <span className="folder-doc-line" style={{ width: '84%' }} />
-    <span className="folder-doc-line" style={{ width: '88%' }} />
-    <span className="folder-doc-block" />
-    <span className="folder-doc-line" style={{ width: '80%' }} />
-    <span className="folder-doc-line" style={{ width: '62%' }} />
+    {!description && <>
+      <span className="folder-doc-line" style={{ width: '92%' }} />
+      <span className="folder-doc-line" style={{ width: '84%' }} />
+      <span className="folder-doc-line" style={{ width: '88%' }} />
+      <span className="folder-doc-block" />
+      <span className="folder-doc-line" style={{ width: '80%' }} />
+      <span className="folder-doc-line" style={{ width: '62%' }} />
+    </>}
   </div>
 );
 
@@ -1733,6 +1735,11 @@ const Folder = ({
         s.onItemClick?.(s.entries[index], index);
         wake();
       },
+      focus: index => {
+        if (!settingsRef.current.zoomOnClick) return;
+        state.focus = index;
+        wake();
+      },
       blur: () => {
         if (state.focus < 0) return false;
         state.focus = -1;
@@ -1786,7 +1793,9 @@ const Folder = ({
   const toggle = () => {
     if (engineRef.current?.blur()) return;
     if (openOn === 'hover') return;
-    setOpen(!isOpen);
+    const nextOpen = !isOpen;
+    if (nextOpen) engineRef.current?.focus(0);
+    setOpen(nextOpen);
   };
 
   const onItemActivate = (event, index) => {

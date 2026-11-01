@@ -5,7 +5,7 @@
 @keyframes blink{50%{opacity:.25}}
 .eh h1{font-size:clamp(1.9rem,4.4vw,3.2rem);letter-spacing:var(--tracking-tight);line-height:var(--lh-tight);color:#fff;margin:18px 0 14px}
 .eh .lead{color:#c9bfe6;max-width:var(--measure);font-size:var(--fs-md);line-height:var(--lh-relaxed)}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.chips span{font-size:var(--fs-sm);line-height:1.45;padding:8px 14px;border-radius:10px;background:#ffffff0d;border:1px solid #ffffff1f;color:#d9d0f0}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}.chips span{font-size:var(--fs-sm);line-height:1.45;padding:8px 14px;border-radius:10px;background:#ffffff0d;border:1px solid #ffffff1f;color:#d9d0f0}.eh .chips span{display:inline-flex;align-items:center;gap:8px}
 .eh .cta{display:flex;gap:12px;flex-wrap:wrap}
 .btn.grad{background:linear-gradient(135deg,#8b5cf6,#6a2bd1);color:#fff;box-shadow:0 8px 26px #6a2bd166}.btn.grad:hover{transform:translateY(-2px)}
 .btn.ghost{background:#ffffff0d;border:1px solid #ffffff2e;color:#fff}.btn.ghost:hover{background:#ffffff1c;transform:translateY(-2px)}.btn.wide{width:100%;justify-content:center;font-size:var(--fs-sm);padding:11px 16px}

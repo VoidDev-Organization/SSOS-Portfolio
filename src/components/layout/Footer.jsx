@@ -1,6 +1,5 @@
 import {A} from '../../assets'
-import {CONFIG,NAV} from '../../data'
-import {NavLink} from './NavLink'
+import {CONFIG} from '../../data'
 import {useLang} from '../../context/LangContext'
 import './Footer.css'
 
@@ -13,11 +12,11 @@ const SOCIALS = CONFIG.social ? [
   {key:'tiktok',label:'TikTok',href:CONFIG.social.tiktok,icon:(<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.6 2.3 2.2 3.9 4.5 4.3v3.1c-1.7-.1-3.3-.7-4.5-1.6v6.4a6.1 6.1 0 1 1-5.2-6v3.2a2.9 2.9 0 1 0 2.1 2.8V3h3.1z"/></svg>)},
 ] : []
 
-export function Footer(){const {t}=useLang();return <footer><div className="wrap"><div className="cols"><div className="brand"><div className="lp"><img src={A.logoLight||A.logo} alt="SSOS"/></div><p>{t('footer.tagline')}</p><p className="muted">{t('footer.mission')}</p></div>
- <nav aria-label={t("footer.navAria")}>{NAV.map(([i,t])=><NavLink key={i} id={i}>{t}</NavLink>)}</nav>
- <div className="info"><h4>{t('footer.contact')}</h4>{CONFIG.contact?<a href={'mailto:'+CONFIG.contact}>{CONFIG.contact}</a>:<span className="muted">{t('footer.contactSoon')}</span>}<h4>{t('footer.follow')}</h4><div className="socials">
+export function Footer(){const {t}=useLang();return <footer><div className="wrap"><div className="cols">
+ <div className="brand"><div className="lp"><img src={A.logoLight||A.logo} alt="SSOS"/></div></div>
+ <div className="info"><div className="contact"><h4>{t('footer.contact')}</h4>{CONFIG.contact?<a href={'mailto:'+CONFIG.contact}>{CONFIG.contact}</a>:<span className="muted">{t('footer.contactSoon')}</span>}</div><div className="follow"><h4>{t('footer.follow')}</h4><div className="socials">
 {SOCIALS.map(s=><a key={s.key} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>{s.icon}</a>)}
-</div></div></div>
+</div></div></div></div>
  <div className="void-credit">
   <a className="void-mark" href={CONFIG.voiddevUrl} target="_blank" rel="noopener noreferrer" aria-label={t('footer.portfolio')}><img src={A.voidDevMark} alt=""/></a>
   <div className="void-credit-copy"><span>{t('footer.credit')}</span><a className="void-name" href={CONFIG.voiddevUrl} target="_blank" rel="noopener noreferrer">Void Developers <span aria-hidden="true">↗</span></a></div>
