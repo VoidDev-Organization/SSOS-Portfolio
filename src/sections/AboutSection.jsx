@@ -21,7 +21,7 @@ export function AboutSection(){
     {title:t('about.role'), description:t('about.roleText')},
   ]
   return (
- <section className="about" id="about"><div className="wrap"><Reveal><div className="top"><div><span className="eyebrow">{t('about.eyebrow')}</span><h2>{t('about.title')}</h2><ScrollReveal as="div"><p className="lead">{t('hero.lead')}</p></ScrollReveal></div><img src={A.owlPen} alt="" aria-hidden="true"/></div>
+ <section className="about" id="about"><div className="wrap"><Reveal><div className="top"><div><span className="eyebrow">{t('about.eyebrow')}</span><h2>{t('about.title')}</h2><ScrollReveal as="div"><p className="lead">{t('hero.lead')}</p></ScrollReveal></div></div>
  <div className="about-folders">{items.map((it,i)=><Folder key={i} label={it.title} items={[it]} size={folderSize} color={theme==='light'?'#315E91':'#6a2bd1'} theme={theme}/>)}</div>
  <div className="about-mobile">{items.map((it,index)=><details className="about-mobile-item" key={it.title}><summary><span className="about-mobile-count">{String(index+1).padStart(2,'0')}</span><span className="about-mobile-heading">{it.title}</span><span className="about-mobile-action"><span className="about-mobile-read">{t('about.readMore')}</span><span className="about-mobile-less">{t('about.readLess')}</span><span className="about-mobile-mark" aria-hidden="true"/></span></summary><p>{it.description}</p></details>)}</div>
  </Reveal></div></section>

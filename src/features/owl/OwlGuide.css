@@ -5,5 +5,5 @@
 .ob{width:66px;height:66px;border-radius:50%;border:3px solid var(--gold);background:var(--navy);padding:4px;cursor:pointer;box-shadow:0 8px 20px #0005}.ob img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:50%}
 .bub .bc{position:absolute;top:4px;right:4px;display:flex;gap:4px}.bub .bc button{position:static;width:32px;height:32px}
 .guide.l{right:auto;left:max(14px,env(safe-area-inset-left,0px));align-items:flex-start}.guide.l .bub{border-radius:18px 18px 18px 4px}.bub{padding-right:76px}.ob.min{width:44px;height:44px;opacity:.85}.ob{transition:width .2s,height .2s}
-@media(max-width:600px){.ob{width:56px;height:56px}.ob.min{width:44px;height:44px}}
+@media(max-width:600px){.ob{width:56px;height:56px}.ob.min{width:44px;height:44px}.guide{max-width:calc(100vw - 24px)}.bub{max-width:min(250px,calc(100vw - 84px));padding:12px 64px 12px 12px;font-size:.8rem;line-height:1.45}}
 @media(max-height:480px) and (orientation:landscape){.guide .bub{display:none}}

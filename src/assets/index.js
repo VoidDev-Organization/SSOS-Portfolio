@@ -14,5 +14,11 @@ import g2 from './g2.jpg'
 import sp2 from './sp2.jpg'
 import spons1 from './spons1.jpg'
 import voidDevMark from './voiddev-mark.png'
+import nexusFlashlight from './nexus-flashlight.webp'
+import nexusBanner from './nexus-youth-banner.webp'
+import studyCollaboration from './study-collaboration.webp'
+import studyLibrary from './study-library.webp'
+import educationAudience from './education-audience.webp'
+import educationTable from './education-table.webp'
 
-export const A={owl,owlPen,logoLight,logoDark,wmLight,wmDark,logo1,logo2,p1,p2,g1,sp1,g2,sp2,spons1,voidDevMark}
+export const A={owl,owlPen,logoLight,logoDark,wmLight,wmDark,logo1,logo2,p1,p2,g1,sp1,g2,sp2,spons1,voidDevMark,nexusFlashlight,nexusBanner,studyCollaboration,studyLibrary,educationAudience,educationTable}

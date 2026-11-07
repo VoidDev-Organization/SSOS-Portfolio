@@ -15,14 +15,16 @@ export function OwlGuide(){const {lang,t}=useLang();
  const seen=useRef(JSON.parse(ss('owlSeen')||'{}')),cur=useRef('home'),msgKey=useRef(''),mu=useRef(muted),timerRef=useRef(),drag=useRef(null),imgRef=useRef(null),guideRef=useRef(null),tRef=useRef(t)
  tRef.current=t
  const say=(k,force,repeat=false)=>{const text=tRef.current('owl.'+k);if(!text||text==='owl.'+k)return;if(force){mu.current=false;setMuted(false);ss('owlMute','')}else if(mu.current||(!repeat&&seen.current[k]))return
-  seen.current[k]=1;ss('owlSeen',JSON.stringify(seen.current));msgKey.current=k;setMsg(text);setShow(true);clearTimeout(timerRef.current);timerRef.current=setTimeout(()=>setShow(false),11000)}
- useEffect(()=>{if(msgKey.current){const text=t('owl.'+msgKey.current);if(text&&text!=='owl.'+msgKey.current)setMsg(text)}},[lang])
+  seen.current[k]=1;ss('owlSeen',JSON.stringify(seen.current));msgKey.current=k;setMsg(text);setShow(true);clearTimeout(timerRef.current);const duration=window.matchMedia('(max-width:600px)').matches?6000:11000;timerRef.current=setTimeout(()=>setShow(false),duration)}
+ useEffect(()=>{if(msgKey.current){const text=t('owl.'+msgKey.current);if(text&&text!=='owl.'+msgKey.current)setMsg(text)}if(!ss('owlSide'))setSide(lang==='ar'?'l':'r')},[lang])
  useEffect(()=>{let frame=0;const update=()=>{frame=0;const marker=window.innerHeight*.42;let active='',best=Infinity
   GUIDE_IDS.forEach(id=>{const section=document.getElementById(id);if(!section)return;const {top,bottom}=section.getBoundingClientRect();if(bottom<=0||top>=window.innerHeight)return;const distance=marker<top?top-marker:marker>bottom?marker-bottom:0;if(distance<best){best=distance;active=id}})
-  if(active&&active!==cur.current){cur.current=active;if(!window.matchMedia('(max-width:600px)').matches)say(active,false,true)}}
+  if(active&&active!==cur.current){cur.current=active;say(active,false,true)}}
   const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)}
-  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();if(!window.matchMedia('(max-width:600px)').matches)timerRef.current=setTimeout(()=>say(cur.current==='home'?'welcome':cur.current),1200)
-  return()=>{window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);if(frame)cancelAnimationFrame(frame);clearTimeout(timerRef.current)}
+  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);schedule();const mobile=window.matchMedia('(max-width:600px)').matches;timerRef.current=setTimeout(()=>say(cur.current==='home'?'welcome':cur.current,false,mobile),1200)
+  const observer=typeof IntersectionObserver==='undefined'?null:new IntersectionObserver(schedule,{rootMargin:'-35% 0px -35% 0px'})
+  GUIDE_IDS.forEach(id=>{const section=document.getElementById(id);if(section)observer?.observe(section)})
+  return()=>{window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);if(frame)cancelAnimationFrame(frame);observer?.disconnect();clearTimeout(timerRef.current)}
  },[])
  useEffect(()=>{if(!pos||!guideRef.current)return;const rect=guideRef.current.getBoundingClientRect();const next=clampGuidePosition(pos.x,pos.y,rect);if(next.x!==pos.x||next.y!==pos.y)setPos(next)},[pos,show,msg,side])
  useEffect(()=>{const keepInView=()=>setPos(current=>{if(!current||!guideRef.current)return current;const rect=guideRef.current.getBoundingClientRect();const next=clampGuidePosition(current.x,current.y,rect);return next.x===current.x&&next.y===current.y?current:next});window.addEventListener('resize',keepInView);return()=>window.removeEventListener('resize',keepInView)},[])

@@ -71,6 +71,10 @@ footer{background:#050310;border-top:1px solid #ffffff14}
 
 /* Impact edition cards keep their gradient surfaces in light mode */
 :root[data-theme=light] .card.ed{background:linear-gradient(150deg,#8a2bd0,#5a0094);color:#fff;border:0}
+:root[data-theme=light] .card.ed.e1{background:#F3EBDD;color:#172033}
+:root[data-theme=light] .card.ed.e1 h3{color:#172033!important}
+:root[data-theme=light] .card.ed.e1 p,:root[data-theme=light] .card.ed.e1 small{color:#475569!important}
+:root[data-theme=light] .card.ed.e1 .num{color:#172033}
 :root[data-theme=light] .card.ed.e2{background:linear-gradient(150deg,#315E91,#172033)}
 :root[data-theme=light] .card.ed.e3{background:linear-gradient(150deg,#172033,#8AB4D8)}
 :root[data-theme=light] .card.ed h3{color:#fff!important}
